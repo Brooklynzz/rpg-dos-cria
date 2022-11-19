@@ -1,2 +1,2 @@
-public class Arqueiro extends Personagem {
+public class Archer extends Character {
 }
