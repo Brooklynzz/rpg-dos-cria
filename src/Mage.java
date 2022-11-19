@@ -1,2 +1,2 @@
-public class Mage extends Character {
+public class Mago extends Personagem {
 }

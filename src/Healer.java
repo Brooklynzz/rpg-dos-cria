@@ -1,2 +1,2 @@
-public class Healer extends Character {
+public class Curandeiro extends Personagem{
 }

@@ -1,14 +1,9 @@
 import java.util.Scanner;
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
+        Personagem personagem = new Personagem();
         Scanner input = new Scanner(System.in);
-
-        Character character = new Character();
-        System.out.println("Escolha o nome do seu personagem:");
-        String charName = input.nextLine();
-        character.setCharName(charName);
-
         System.out.println("Escolha sua raça:");
         System.out.println("1 - Anão");
         System.out.println("2 - Humano");
@@ -23,42 +18,31 @@ public class Main {
         System.out.println("4 - Curandeiro");
         int role = input.nextInt();
 
-        character.setRace(race);
-        Warrior warriorInstance = null;
-        Mage mageInstance = null;
-        Archer archerInstance = null;
-        Healer healerInstance = null;
-        Character baseInstance = null;
+        personagem.setRaca(race);
 
-        switch (role) {
-            case 1:
-                warriorInstance = new Warrior();
-                character.setGuerreiro(warriorInstance);
-                baseInstance = warriorInstance;
-                break;
-            case 2:
-                mageInstance = new Mage();
-                character.setMago(mageInstance);
-                baseInstance = mageInstance;
-                break;
-            case 3:
-                archerInstance = new Archer();
-                character.setArcher(archerInstance);
-                baseInstance = archerInstance;
-                break;
-            case 4:
-                healerInstance = new Healer();
-                character.setHealer(healerInstance);
-                baseInstance = healerInstance;
-                break;
-            default:
-                System.out.println("Sem classe");;
-        }
+            switch (role) {
+                case 1:
+                    Guerreiro guerreiro = new Guerreiro();
+                    personagem.setGuerreiro(guerreiro);
+                    break;
+                case 2:
+                    Mago mago = new Mago();
+                    personagem.setMago(mago);
+                    break;
+                case 3:
+                    Arqueiro arqueiro = new Arqueiro();
+                    personagem.setArqueiro(arqueiro);
+                    break;
+                case 4:
+                    Curandeiro curandeiro = new Curandeiro();
+                    personagem.setCurandeiro(curandeiro);
+                    break;
+                default:
+                    System.out.println("Sem classe");;
+            }
 
-        System.out.println("-----------------------------------------------------------------------------------------------");
-        System.out.println(character.getCharName() + " é um " + character.getRace() + " de classe " + character.getChosenRole() + " com " + baseInstance.getHp() +
-                " de Vida e " + baseInstance.getMp() + " de Mana");
-        System.out.println("-----------------------------------------------------------------------------------------------");
+        System.out.println("Seu personagem é um " + personagem.getRaca() + " de classe " + personagem.getChosenRole() + " com " + personagem.getHp() +
+                " de Vida e " + personagem.getMp() + " de Mana");
 
         input.close();
     }

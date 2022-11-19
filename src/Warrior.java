@@ -1,12 +1,8 @@
-public class Warrior extends Character {
+public class Guerreiro extends Personagem {
 
-    @Override
     public int getHp() {
+        System.out.println("aaaaaaaaaaaaaaaaaaaa");
         return super.getHp() + 200;
     }
 
-    @Override
-    public int getMp() {
-        return super.getMp() + 150;
-    }
 }

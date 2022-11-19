@@ -1,61 +1,52 @@
-public class Character {
-    private String charName;
-    private String race;
+public class Personagem {
+    private String raca;
     private String chosenRole;
     private int hp;
     private int mp;
-    private Warrior warrior;
-    private Mage mage;
-    private Archer archer;
-    private Healer healer;
+    private Guerreiro guerreiro;
+    private Mago mago;
+    private Arqueiro arqueiro;
+    private Curandeiro curandeiro;
 
 
-    public String getCharName() {
-        return charName;
+    public Guerreiro getGuerreiro() {
+        return guerreiro;
     }
 
-    public void setCharName(String charName) {
-        this.charName = charName;
-    }
-
-    public Warrior getGuerreiro() {
-        return warrior;
-    }
-
-    public void setGuerreiro(Warrior warrior) {
-        this.warrior = warrior;
+    public void setGuerreiro(Guerreiro guerreiro) {
+        this.guerreiro = guerreiro;
         this.chosenRole = "Guerreiro";
     }
 
-    public Mage getMago() {
-        return mage;
+    public Mago getMago() {
+        return mago;
     }
 
-    public void setMago(Mage mage) {
-        this.mage = mage;
+    public void setMago(Mago mago) {
+        this.mago = mago;
         this.chosenRole = "Mago";
     }
 
-    public Archer getArcher() {
-        return archer;
+    public Arqueiro getArqueiro() {
+        return arqueiro;
     }
 
-    public void setArcher(Archer archer) {
-        this.archer = archer;
+    public void setArqueiro(Arqueiro arqueiro) {
+        this.arqueiro = arqueiro;
         this.chosenRole = "Arqueiro";
     }
 
-    public Healer getHealer() {
-        return healer;
+    public Curandeiro getCurandeiro() {
+        return curandeiro;
     }
 
-    public void setHealer(Healer healer) {
-        this.healer = healer;
+    public void setCurandeiro(Curandeiro curandeiro) {
+        this.curandeiro = curandeiro;
         this.chosenRole = "Curandeiro";
     }
 
     public int getHp() {
-        return this.hp;
+        return hp;
     }
 
     public void setHp(int hp) {
@@ -71,30 +62,30 @@ public class Character {
     }
 
 
-    public void setRace(int id) {
+    public void setRaca(int id) {
         switch (id) {
             case 1:
-                this.race = "Anão";
+                this.raca = "Anão";
                 break;
             case 2:
-                this.race = "Humano";
+                this.raca = "Humano";
                 break;
             case 3:
-                this.race = "Elfo Negro";
+                this.raca = "Elfo Negro";
                 break;
             case 4:
-                this.race = "Orc";
+                this.raca = "Orc";
                 break;
             default:
-                this.race = "Sem Raça";
+                this.raca = "Sem Raça";
         }
     }
 
-    public String getRace() {
-        return race;
+    public String getRaca() {
+        return raca;
     }
 
     public String getChosenRole() {
-        return this.chosenRole;
+        return chosenRole;
     }
 }
