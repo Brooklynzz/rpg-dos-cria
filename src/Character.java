@@ -1,48 +1,55 @@
-public class Personagem {
+public class Character {
     private String raca;
     private String chosenRole;
     private int hp;
     private int mp;
-    private Guerreiro guerreiro;
-    private Mago mago;
-    private Arqueiro arqueiro;
-    private Curandeiro curandeiro;
+    private Warrior warrior;
+    private Mage mage;
+    private Archer archer;
+    private Healer healer;
 
-
-    public Guerreiro getGuerreiro() {
-        return guerreiro;
+    public void setRaca(String raca) {
+        this.raca = raca;
     }
 
-    public void setGuerreiro(Guerreiro guerreiro) {
-        this.guerreiro = guerreiro;
-        this.chosenRole = "Guerreiro";
+    public void setChosenRole(String chosenRole) {
+        this.chosenRole = chosenRole;
     }
 
-    public Mago getMago() {
-        return mago;
+    public Warrior getWarrior() {
+        return warrior;
     }
 
-    public void setMago(Mago mago) {
-        this.mago = mago;
-        this.chosenRole = "Mago";
+    public void setWarrior(Warrior warrior) {
+        this.warrior = warrior;
+        this.setChosenRole("Guerreiro");
     }
 
-    public Arqueiro getArqueiro() {
-        return arqueiro;
+    public Mage getMage() {
+        return mage;
     }
 
-    public void setArqueiro(Arqueiro arqueiro) {
-        this.arqueiro = arqueiro;
-        this.chosenRole = "Arqueiro";
+    public void setMage(Mage mage) {
+        this.mage = mage;
+        this.setChosenRole("Mago");
     }
 
-    public Curandeiro getCurandeiro() {
-        return curandeiro;
+    public Archer getArcher() {
+        return archer;
     }
 
-    public void setCurandeiro(Curandeiro curandeiro) {
-        this.curandeiro = curandeiro;
-        this.chosenRole = "Curandeiro";
+    public void setArcher(Archer archer) {
+        this.archer = archer;
+        this.setChosenRole("Arqueiro");
+    }
+
+    public Healer getHealer() {
+        return healer;
+    }
+
+    public void setHealer(Healer healer) {
+        this.healer = healer;
+        this.setChosenRole("Curandeiro");
     }
 
     public int getHp() {
