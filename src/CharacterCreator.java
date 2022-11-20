@@ -7,6 +7,7 @@ public class CharacterCreator {
         System.out.println("Escolha o nome do personagem:");
         String charName = input.nextLine();
 
+        System.out.println("-----------------------------------------------");
         System.out.println("Escolha sua raça:");
         System.out.println("1 - Anão");
         System.out.println("2 - Humano");
@@ -14,6 +15,7 @@ public class CharacterCreator {
         System.out.println("4 - Orc");
         int race = input.nextInt();
 
+        System.out.println("-----------------------------------------------");
         System.out.println("Escolha sua classe:");
         System.out.println("1 - Guerreiro");
         System.out.println("2 - Mago");

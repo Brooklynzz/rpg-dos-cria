@@ -7,6 +7,7 @@ public class Main {
         CharacterCreator creator = new CharacterCreator();
         Character character = creator.newChar();
         Character baseInstance = character.getBaseInstance();
+        System.out.println("-----------------------------------------------");
         System.out.print("1 - Aleatorizar inimigo \n2 - Criar inimigo\n");
         int randomEnemy = input.nextInt();
 
