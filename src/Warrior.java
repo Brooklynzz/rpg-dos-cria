@@ -11,7 +11,7 @@ public class Warrior extends Character implements Combat{
         return 25;
     }
     public double getDamageInstance2() {
-        int randomDamage = (int)Math.floor(Math.random()*(50-15+1)+15);
+        int randomDamage = (int)Math.floor(Math.random()*(100-40+1)+40);
         return randomDamage;
     }
 }

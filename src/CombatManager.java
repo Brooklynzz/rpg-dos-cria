@@ -19,7 +19,11 @@ public class CombatManager{
         System.out.println("Vida antes do ataque: " + attackedChar);
         e.damage(attackerDamage2);
 
-        System.out.println("O inimigo ficou com " + e.getHp() + " de vida!");
+        if (e.getHp() > 0.0) {
+            System.out.println("O inimigo ficou com " + e.getHp() + " de vida!");
+        } else {
+            System.out.println("O inimigo ficou com " + Math.max(0, e.getHp()) + " de vida!");
+        }
     }
 
     public double startCombat(Character c, Character e) throws InterruptedException {
@@ -27,6 +31,16 @@ public class CombatManager{
         cm.primaryAttack(c, e);
         Thread.sleep(5000);
         cm.secondaryAttack(c, e);
+
+        if (e.getHp() <= 0) {
+            System.out.println("------------------------------------");
+            System.out.println("Parabéns!");
+            System.out.println("Seu inimigo não tankou e foi de comes e bebes");
+        } else {
+            System.out.println("------------------------------------");
+            System.out.println("Você não teve sorte!");
+            System.out.println("Seu inimigou resistiu");
+        }
         return e.getHp();
     }
 }
