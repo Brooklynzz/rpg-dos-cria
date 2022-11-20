@@ -3,13 +3,31 @@ public class Character {
     private String raca;
     private String chosenRole;
     private String enemyRole;
-    private int hp;
-    private int mp;
+    private double hp;
+    private double mp;
     private Warrior warrior;
     private Mage mage;
     private Archer archer;
     private Healer healer;
     private Character baseInstance;
+    private double damageInstance1;
+    private double damageInstance2;
+
+    public double getDamageInstance1() {
+        return damageInstance1;
+    }
+
+    public void setDamageInstance1(int damageInstance1) {
+        this.damageInstance1 = damageInstance1;
+    }
+
+    public double getDamageInstance2() {
+        return damageInstance2;
+    }
+
+    public void setDamageInstance2(double damageInstance2) {
+        this.damageInstance2 = damageInstance2;
+    }
 
     public String getCharName() {
         return charName;
@@ -80,19 +98,25 @@ public class Character {
         this.setChosenRole("Curandeiro");
     }
 
-    public int getHp() {
+    public double getHp() {
         return hp;
     }
 
-    public void setHp(int hp) {
+    public double setHp(double hp) {
         this.hp = hp;
+        return hp;
     }
 
-    public int getMp() {
+    public double damage(double valor) {
+        double v = this.hp -= valor;
+        return this.hp;
+    }
+
+    public double getMp() {
         return mp;
     }
 
-    public void setMp(int mp) {
+    public void setMp(double mp) {
         this.mp = mp;
     }
 
@@ -115,25 +139,6 @@ public class Character {
                 this.raca = "Sem Raça";
         }
     }
-
-//    public void setEnemyRole(int idRole) {
-//        switch (idRole) {
-//            case 1:
-//                this.chosenRole = "Guerreiro";
-//                break;
-//            case 2:
-//                this.chosenRole = "Mago";
-//                break;
-//            case 3:
-//                this.chosenRole = "Arqueiro";
-//                break;
-//            case 4:
-//                this.chosenRole = "Curandeiro";
-//                break;
-//            default:
-//                this.chosenRole = "Sem Classe";
-//        }
-//    }
 
     public String getRaca() {
         return raca;
