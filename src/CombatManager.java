@@ -24,7 +24,7 @@ public class CombatManager{
     }
 
     public void startCombat(Character cdata, Character c, Character edata, Character e) throws InterruptedException {
-        CombatManager cm = new CombatManager();
+        //CombatManager cm = new CombatManager();
         double enemyHp = e.getHp();
         double currentHp = c.getHp();
 //        do {
@@ -36,9 +36,9 @@ public class CombatManager{
 
         while (enemyHp > 0 && currentHp > 0) {
             Thread.sleep(4000);
-            cm.primaryAttack(cdata, c, edata, e);
+            this.primaryAttack(cdata, c, edata, e);
             Thread.sleep(4000);
-            cm.primaryAttack(edata, e, cdata, c);
+            this.primaryAttack(edata, e, cdata, c);
             enemyHp = e.getHp();
             currentHp = c.getHp();
 
