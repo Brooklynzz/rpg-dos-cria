@@ -15,11 +15,9 @@ public class Main {
         Character characterEnemy;
 
         if (randomEnemy == 2) {
-            Character enemy = creator.newChar();
-            characterEnemy = enemy;
+            characterEnemy = creator.newChar();
         } else {
-            Character enemy = creator.randomEnemy();
-            characterEnemy = enemy;
+            characterEnemy = creator.randomEnemy();
         }
         Character enemyBaseInstance = characterEnemy.getBaseInstance();
 
@@ -29,19 +27,14 @@ public class Main {
         System.out.println(ConsoleColors.RED_BOLD + "Gerando um oponente digno..." + ConsoleColors.RESET);
         Thread.sleep(5000);
 
-
-        System.out.println("ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー");
         System.out.println(ConsoleColors.RED + "Seu oponente se chama: " + characterEnemy.getCharName() + ", ele é um " +
                 characterEnemy.getRaca() + " de classe " + characterEnemy.getChosenRole() +
                 " com " + enemyBaseInstance.getHp() + " de Vida e " + enemyBaseInstance.getMp() + " de Mana" + ConsoleColors.RESET);
 
         System.out.println(ConsoleColors.YELLOW + "Se preparando para o duelo..." + ConsoleColors.RESET);
         Thread.sleep(5000);
-        //System.out.println(character.getCharName() + " desfere o primeiro golpe em " + characterEnemy.getCharName());
-        Thread.sleep(3000);
         CombatManager cm = new CombatManager();
         cm.startCombat(character, baseInstance, characterEnemy, enemyBaseInstance);
-
         input.close();
     }
 }

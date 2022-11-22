@@ -25,14 +25,30 @@ public class CombatManager{
 
     public void startCombat(Character cdata, Character c, Character edata, Character e) throws InterruptedException {
         CombatManager cm = new CombatManager();
-            double enemyHp = e.getHp();
-            double currentHp = c.getHp();
-        do {
+        double enemyHp = e.getHp();
+        double currentHp = c.getHp();
+//        do {
+//            Thread.sleep(4000);
+//            cm.primaryAttack(cdata, c, edata, e);
+//            Thread.sleep(4000);
+//            cm.secondaryAttack(edata, e, cdata, c);
+//        } while (enemyHp > 0 || currentHp > 0);
+
+        while (enemyHp > 0 && currentHp > 0) {
             Thread.sleep(4000);
             cm.primaryAttack(cdata, c, edata, e);
-            enemyHp = e.getHp();
             Thread.sleep(4000);
-            cm.secondaryAttack(edata, e, cdata, c);
-        }while(enemyHp != 0.0 || currentHp != 0.0);
+            cm.primaryAttack(edata, e, cdata, c);
+            enemyHp = e.getHp();
+            currentHp = c.getHp();
+
+            if (enemyHp <= 0) {
+                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + " VOCÊ DERROTOU " + edata.getCharName().toUpperCase() + ConsoleColors.RESET);
+                break;
+            } else if (currentHp <= 0) {
+                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + "VOCÊ PERDEU" +  ConsoleColors.RESET);
+                break;
+            }
+        }
     }
 }
