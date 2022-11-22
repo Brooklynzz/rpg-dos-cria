@@ -20,11 +20,7 @@ public class CombatManager{
         System.out.println("Vida antes do ataque: " + attackedChar);
         e.damage(attackerDamage2);
 
-        if (e.getHp() > 0.0) {
-            System.out.println(edata.getCharName() + " ficou com " + e.getHp() + " de vida!");
-        } else {
-            System.out.println(edata.getCharName() + " ficou com " + Math.max(0, e.getHp()) + " de vida!");
-        }
+        System.out.println(ConsoleColors.BLACK_BACKGROUND_BRIGHT + edata.getCharName()+ " ficou com " + e.getHp() + " de vida!" + ConsoleColors.RESET);
     }
 
     public void startCombat(Character cdata, Character c, Character edata, Character e) throws InterruptedException {
@@ -32,11 +28,11 @@ public class CombatManager{
             double enemyHp = e.getHp();
             double currentHp = c.getHp();
         do {
+            Thread.sleep(4000);
             cm.primaryAttack(cdata, c, edata, e);
-            System.out.println("INFERNOOOOO " + e.getHp());
             enemyHp = e.getHp();
-            Thread.sleep(5000);
+            Thread.sleep(4000);
             cm.secondaryAttack(edata, e, cdata, c);
-        }while(enemyHp >= 0.0 || currentHp >= 0.0);
+        }while(enemyHp != 0.0 || currentHp != 0.0);
     }
 }
