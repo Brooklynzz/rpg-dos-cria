@@ -4,11 +4,11 @@ public class CharacterCreator {
 
     public Character newChar() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Escolha o nome do personagem:");
+        System.out.println(ConsoleColors.GREEN + "Escolha o nome do personagem:" + ConsoleColors.RESET);
         String charName = input.nextLine();
 
         System.out.println("-----------------------------------------------");
-        System.out.println("Escolha sua raça:");
+        System.out.println(ConsoleColors.GREEN + "Escolha sua raça:" + ConsoleColors.RESET);
         System.out.println("1 - Anão");
         System.out.println("2 - Humano");
         System.out.println("3 - Elfo Negro");
@@ -16,7 +16,7 @@ public class CharacterCreator {
         int race = input.nextInt();
 
         System.out.println("-----------------------------------------------");
-        System.out.println("Escolha sua classe:");
+        System.out.println(ConsoleColors.GREEN + "Escolha sua classe:" + ConsoleColors.RESET);
         System.out.println("1 - Guerreiro");
         System.out.println("2 - Mago");
         System.out.println("3 - Arqueiro");

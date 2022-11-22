@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import static java.lang.Thread.sleep;
 
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
@@ -8,7 +9,7 @@ public class Main {
         Character character = creator.newChar();
         Character baseInstance = character.getBaseInstance();
         System.out.println("-----------------------------------------------");
-        System.out.print("1 - Aleatorizar inimigo \n2 - Criar inimigo\n");
+        System.out.println(ConsoleColors.RED + "1 - Aleatorizar inimigo \n2 - Criar inimigo\n" + ConsoleColors.RESET);
         int randomEnemy = input.nextInt();
 
         Character characterEnemy;
@@ -22,26 +23,25 @@ public class Main {
         }
         Character enemyBaseInstance = characterEnemy.getBaseInstance();
 
-        System.out.println(character.getCharName() + " é um " + character.getRaca() + " de classe " + character.getChosenRole() +
-                    " com " + baseInstance.getHp() + " de Vida e " + baseInstance.getMp() + " de Mana");
+        System.out.println(ConsoleColors.GREEN + character.getCharName() + " é um " + character.getRaca() + " de classe " + character.getChosenRole() +
+                " com " + baseInstance.getHp() + " de Vida e " + baseInstance.getMp() + " de Mana" + ConsoleColors.RESET);
 
-        System.out.println("--------------------------------------------------------------------");
-        System.out.println("Gerando um oponente digno...");
+        System.out.println(ConsoleColors.RED_BOLD + "Gerando um oponente digno..." + ConsoleColors.RESET);
         Thread.sleep(5000);
 
 
-        System.out.println("--------------------------------------------------------------------");
-        System.out.println("Seu oponente se chama: " + characterEnemy.getCharName() + ", ele é um " +
+        System.out.println("ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー");
+        System.out.println(ConsoleColors.RED + "Seu oponente se chama: " + characterEnemy.getCharName() + ", ele é um " +
                 characterEnemy.getRaca() + " de classe " + characterEnemy.getChosenRole() +
-                " com " + enemyBaseInstance.getHp() + " de Vida e " + enemyBaseInstance.getMp() + " de Mana");
+                " com " + enemyBaseInstance.getHp() + " de Vida e " + enemyBaseInstance.getMp() + " de Mana" + ConsoleColors.RESET);
 
-        System.out.println("--------------------------------------------------------------------");
-        System.out.println("Se preparando para o duelo...");
+        System.out.println(ConsoleColors.YELLOW + "Se preparando para o duelo..." + ConsoleColors.RESET);
         Thread.sleep(5000);
-        System.out.println(character.getCharName() + " desfere o primeiro golpe em " + characterEnemy.getCharName());
+        //System.out.println(character.getCharName() + " desfere o primeiro golpe em " + characterEnemy.getCharName());
         Thread.sleep(3000);
         CombatManager cm = new CombatManager();
-        cm.startCombat(baseInstance, enemyBaseInstance);
+        cm.startCombat(character, baseInstance, characterEnemy, enemyBaseInstance);
 
+        input.close();
     }
 }
