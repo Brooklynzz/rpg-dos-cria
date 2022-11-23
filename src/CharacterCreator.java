@@ -37,7 +37,9 @@ public class CharacterCreator {
         int randomRace = (int)Math.floor(Math.random()*(max-min+1)+min);
         int randomRole = (int)Math.floor(Math.random()*(max-min+1)+min);
 
-        Character characterEnemy = new Character("Inimigo");
+        CharacterNames nomeAleatorio = new CharacterNames();
+
+        Character characterEnemy = new Character(nomeAleatorio.selectName());
         characterEnemy.setRaca(randomRace);
         characterEnemy.setRole(randomRole);
         Character enemyBaseInstance = characterEnemy.getBaseInstance();
