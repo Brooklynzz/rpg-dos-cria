@@ -18,6 +18,7 @@ public class CharacterNames {
         lastName.add("Mundi");
         lastName.add("Melo");
         lastName.add("Tapete");
+        lastName.add("Maravilha");
 
         Random random = new Random();
         int firstIndex = random.nextInt(firstName.size());
