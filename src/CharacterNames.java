@@ -10,8 +10,8 @@ public class CharacterNames {
         firstName.add("Malek");
         firstName.add("Fellipe");
         firstName.add("Bruno");
-        firstName.add("Sheila");
-        firstName.add("Eni");
+        firstName.add("Sheylla");
+        firstName.add("Enni");
 
         List<String> lastName = new ArrayList<>();
         lastName.add("Puxa Cabo");
