@@ -41,6 +41,10 @@ public class Character {
         this.charName = charName;
     }
 
+    public Character(CharacterNames nomeAleatorio) {
+        this.charName = nomeAleatorio.selectName();
+    }
+
     public Character() {
 
     }
@@ -84,7 +88,7 @@ public class Character {
         return archer;
     }
 
-    public void setArcher(Archer archer) {
+   public void setArcher(Archer archer) {
         this.archer = archer;
         this.setChosenRole("Arqueiro");
     }
