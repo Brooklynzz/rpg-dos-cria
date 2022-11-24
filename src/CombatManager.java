@@ -28,10 +28,10 @@ public class CombatManager{
             currentHp = c.getHp();
 
             if (enemyHp <= 0) {
-                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + " VOCÊ DERROTOU " + edata.getCharName().toUpperCase() + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + cdata.getCharName() + " DERROTOU " + edata.getCharName().toUpperCase() + ConsoleColors.RESET);
                 break;
             } else if (currentHp <= 0) {
-                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + "VOCÊ PERDEU" +  ConsoleColors.RESET);
+                System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + edata.getCharName() + " DERROTOU " + cdata.getCharName() +  ConsoleColors.RESET);
                 break;
             }
         }

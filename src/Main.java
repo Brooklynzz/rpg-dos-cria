@@ -19,13 +19,13 @@ public class Main {
         }
         Character enemyBaseInstance = characterEnemy.getBaseInstance();
 
-        System.out.println(ConsoleColors.GREEN + character.getCharName() + " é um " + character.getRaca() + " de classe " + character.getChosenRole() +
+        System.out.println(ConsoleColors.GREEN + character.getCharName() + " é um(a) " + character.getRaca() + " de classe " + character.getChosenRole() +
                 " com " + baseInstance.getHp() + " de Vida e " + baseInstance.getMp() + " de Mana" + ConsoleColors.RESET);
 
-        System.out.println(ConsoleColors.RED_BOLD + "Gerando um oponente digno..." + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.RED_BOLD + "Gerando um(a) oponente digno..." + ConsoleColors.RESET);
         Thread.sleep(5000);
 
-        System.out.println(ConsoleColors.RED + "Seu oponente se chama: " + characterEnemy.getCharName() + ", ele é um " +
+        System.out.println(ConsoleColors.RED + "Seu oponente se chama: " + characterEnemy.getCharName() + ", ele(a) é um(a) " +
                 characterEnemy.getRaca() + " de classe " + characterEnemy.getChosenRole() +
                 " com " + enemyBaseInstance.getHp() + " de Vida e " + enemyBaseInstance.getMp() + " de Mana" + ConsoleColors.RESET);
 
