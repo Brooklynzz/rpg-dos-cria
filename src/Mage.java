@@ -8,11 +8,7 @@ public class Mage extends Character implements Combat {
     public double getMp() {
         return super.getMp() + 200;
     }
-    @Override
-    public double getDamageInstance1() {
-        return 30;
-    }
-    public double getDamageInstance2() {
-        return (int)Math.floor(Math.random()*(50-15+1)+15);
+    public double getDamageInstance() {
+        return (int)Math.floor(Math.random()*(80-45+1)+45);
     }
 }

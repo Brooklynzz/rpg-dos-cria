@@ -21,7 +21,7 @@ public class Character {
         this.damageInstance1 = damageInstance1;
     }
 
-    public double getDamageInstance2() {
+    public double getDamageInstance() {
         return damageInstance2;
     }
 

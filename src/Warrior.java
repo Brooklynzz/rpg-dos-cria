@@ -10,11 +10,8 @@ public class Warrior extends Character implements Combat{
     public double getMp() {
         return super.getMp() + 125;
     }
-    @Override
-    public double getDamageInstance1() {
-        return 25;
-    }
-    public double getDamageInstance2() {
-        return (int)Math.floor(Math.random()*(100-40+1)+40);
+
+    public double getDamageInstance() {
+        return (int)Math.floor(Math.random()*(80-40+1)+40);
     }
 }
