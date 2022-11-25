@@ -10,6 +10,7 @@ public class Main {
         System.out.println(ConsoleColors.RED + "1 - Aleatorizar inimigo \n2 - Criar inimigo\n" + ConsoleColors.RESET);
         int randomEnemy = input.nextInt();
 
+        System.out.println("testes");
         Character characterEnemy;
 
         if (randomEnemy == 2) {
