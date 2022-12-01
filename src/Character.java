@@ -12,6 +12,7 @@ public class Character {
     private Character baseInstance;
     private double damageInstance1;
     private double damageInstance2;
+    private double manaCost;
 
     public double getDamageInstance1() {
         return damageInstance1;
@@ -20,6 +21,11 @@ public class Character {
     public void setDamageInstance1(int damageInstance1) {
         this.damageInstance1 = damageInstance1;
     }
+
+    public double getManaCost() {
+        return this.manaCost;
+    }
+
 
     public double getDamageInstance() {
         return damageInstance2;
@@ -30,7 +36,7 @@ public class Character {
     }
 
     public String getCharName() {
-        return charName;
+        return this.charName;
     }
 
     public void setCharName(String charName) {
@@ -115,6 +121,12 @@ public class Character {
         double v = this.hp -= valor;
         return this.hp;
     }
+
+    public double manaUsage(double valor) {
+        double v = this.mp -= valor;
+        return this.mp;
+    }
+
 
     public double getMp() {
         return mp;

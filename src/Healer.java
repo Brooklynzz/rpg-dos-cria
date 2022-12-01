@@ -12,4 +12,8 @@ public class Healer extends Character implements Combat {
     public double getDamageInstance() {
         return (int)Math.floor(Math.random()*(60-25+1)+25);
     }
+
+    public double getManaCost() {
+        return 45;
+    }
 }
