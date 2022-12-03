@@ -13,27 +13,6 @@ public class Character {
     private double damageInstance;
     private double manaCost;
 
-    public double getDamageInstance() {
-        return damageInstance;
-    }
-
-//    public void setDamageInstance1(int damageInstance1) {
-//        this.damageInstance1 = damageInstance1;
-//    }
-
-    public double getManaCost() {
-        return this.manaCost;
-    }
-
-    public String getCharName() {
-        return this.charName;
-    }
-
-
-    public void setCharName(String charName) {
-        this.charName = charName;
-    }
-
     public Character(String charName) {
         this.charName = charName;
     }
@@ -44,6 +23,22 @@ public class Character {
 
     public Character() {
 
+    }
+
+    public double getDamageInstance() {
+        return damageInstance;
+    }
+
+    public double getManaCost() {
+        return this.manaCost;
+    }
+
+    public String getCharName() {
+        return this.charName;
+    }
+
+    public void setCharName(String charName) {
+        this.charName = charName;
     }
 
     public void setRaca(String raca) {
@@ -127,7 +122,6 @@ public class Character {
         this.mp = mp;
     }
 
-
     public void setRaca(int id) {
         switch (id) {
             case 1:
@@ -159,7 +153,6 @@ public class Character {
     Mage instancedMage = null;
     Archer instancedArcher = null;
     Healer instancedHealer = null;
-    //Character baseInstance = null;
 
     public int setRole(int role) {
         switch (role) {
