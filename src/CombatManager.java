@@ -1,4 +1,4 @@
-public class CombatManager{
+public class CombatManager  {
         boolean manaAvailable = true;
 
     public void primaryAttack(Character cdata, Character c, Character edata, Character e) {

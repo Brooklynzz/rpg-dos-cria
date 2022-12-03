@@ -10,34 +10,25 @@ public class Character {
     private Archer archer;
     private Healer healer;
     private Character baseInstance;
-    private double damageInstance1;
-    private double damageInstance2;
+    private double damageInstance;
     private double manaCost;
 
-    public double getDamageInstance1() {
-        return damageInstance1;
+    public double getDamageInstance() {
+        return damageInstance;
     }
 
-    public void setDamageInstance1(int damageInstance1) {
-        this.damageInstance1 = damageInstance1;
-    }
+//    public void setDamageInstance1(int damageInstance1) {
+//        this.damageInstance1 = damageInstance1;
+//    }
 
     public double getManaCost() {
         return this.manaCost;
     }
 
-
-    public double getDamageInstance() {
-        return damageInstance2;
-    }
-
-    public void setDamageInstance2(double damageInstance2) {
-        this.damageInstance2 = damageInstance2;
-    }
-
     public String getCharName() {
         return this.charName;
     }
+
 
     public void setCharName(String charName) {
         this.charName = charName;
