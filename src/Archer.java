@@ -1,3 +1,7 @@
+/**
+ * Classe arqueiro
+ */
+
 public class Archer extends Character implements Combat {
     public String getCharName() {
         return super.getCharName();

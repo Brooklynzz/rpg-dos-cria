@@ -1,3 +1,9 @@
+/**
+ * Classe responsável pela criação dos personagens, tanto o seu próprio, quanto o seu inimigo. Há também o método
+ * para criação de um inimigo aleatório. Tudo é feito por meio de um scanner que coleta dados do console.
+ *
+ */
+
 import java.util.Scanner;
 
 public class CharacterCreator {
@@ -30,6 +36,10 @@ public class CharacterCreator {
 
         return character;
     }
+
+/**
+ * Método para criação de um inimigo aleatório abaixo.
+ */
 
     public Character randomEnemy() {
         int min = 1;

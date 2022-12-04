@@ -1,3 +1,8 @@
+/**
+ * Classe que lida com o combate, o gasto de mana, de vida e críticos são controlados por aqui. Há a possibilidade de
+ * perder ao ser derrotado, e de perder por falta de mana
+ */
+
 import java.util.Objects;
 
 public class CombatManager  {
@@ -26,12 +31,19 @@ public class CombatManager  {
             System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + cdata.getCharName() + " PERDEU POR FALTA DE MANA! " +  ConsoleColors.RESET);
             System.exit(0);
         }
+/**
+ * Caso um dos personagens seja da classe healer, ele terá uma chance de se curar a cada ataque.
+ */
         double healChance = (int)Math.floor(Math.random()*(10-1+1)+1);
         if (Objects.equals(cdata.getChosenRole(), "Curandeiro") && healChance >= 5) {
             c.heal(35);
             System.out.println(ConsoleColors.PURPLE_BRIGHT + cdata.getCharName() + " se curou em 50 de vida!" + ConsoleColors.RESET);
         }
     }
+
+/**
+ * O início do combate se dá aqui, cada personagem ataca por vez, seus danos são aleatórios.
+ */
 
     public void startCombat(Character cdata, Character c, Character edata, Character e) throws InterruptedException {
         double enemyHp = e.getHp();

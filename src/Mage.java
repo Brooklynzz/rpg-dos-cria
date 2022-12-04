@@ -1,3 +1,7 @@
+/**
+ * Classe mago
+ */
+
 public class Mage extends Character implements Combat {
     public String getCharName() {
         return super.getCharName();

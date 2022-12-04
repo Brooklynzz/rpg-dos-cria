@@ -1,3 +1,11 @@
+/**
+ * Classe mãe que serve de base para o modelo de criação dos personagens, cada personagem recebe outra classe, que
+ * definirá sua role.
+ *
+ * @author Brooklyn
+ * @version 0.1
+ */
+
 public class Character {
     private String charName;
     private String raca;
@@ -13,113 +21,16 @@ public class Character {
     private double damageInstance;
     private double manaCost;
 
-    public Character(String charName) {
-        this.charName = charName;
-    }
-
-    public Character(CharacterNames nomeAleatorio) {
-        this.charName = nomeAleatorio.selectName();
-    }
-
     public Character() {
 
     }
 
-    public double getDamageInstance() {
-        return damageInstance;
-    }
-
-    public double getManaCost() {
-        return this.manaCost;
+    public Character(String charName) {
+        this.charName = charName;
     }
 
     public String getCharName() {
         return this.charName;
-    }
-
-    public void setCharName(String charName) {
-        this.charName = charName;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-
-    public void setChosenRole(String chosenRole) {
-        this.chosenRole = chosenRole;
-    }
-
-    public Character getBaseInstance() {
-        return baseInstance;
-    }
-
-    public void setBaseInstance(Character baseInstance) {
-        this.baseInstance = baseInstance;
-    }
-
-    public Warrior getWarrior() {
-        return warrior;
-    }
-
-    public void setWarrior(Warrior warrior) {
-        this.warrior = warrior;
-        this.setChosenRole("Guerreiro");
-        this.baseInstance = warrior;
-    }
-
-    public Mage getMage() {
-        return mage;
-    }
-
-    public void setMage(Mage mage) {
-        this.mage = mage;
-        this.setChosenRole("Mago");
-    }
-
-    public Archer getArcher() {
-        return archer;
-    }
-
-   public void setArcher(Archer archer) {
-        this.archer = archer;
-        this.setChosenRole("Arqueiro");
-    }
-
-    public Healer getHealer() {
-        return healer;
-    }
-
-    public void setHealer(Healer healer) {
-        this.healer = healer;
-        this.setChosenRole("Curandeiro");
-    }
-
-    public double getHp() {
-        return hp;
-    }
-
-    public double setHp(double hp) {
-        this.hp = hp;
-        return hp;
-    }
-
-    public double damage(double valor) {
-        double v = this.hp -= valor;
-        return this.hp;
-    }
-
-    public double manaUsage(double valor) {
-        double v = this.mp -= valor;
-        return this.mp;
-    }
-
-
-    public double getMp() {
-        return mp;
-    }
-
-    public void setMp(double mp) {
-        this.mp = mp;
     }
 
     public void setRaca(int id) {
@@ -181,6 +92,91 @@ public class Character {
         }
         return role;
     }
+
+    public double getHp() {
+        return hp;
+    }
+
+    public double setHp(double hp) {
+        this.hp = hp;
+        return hp;
+    }
+
+    public double getMp() {
+        return mp;
+    }
+
+    public void setMp(double mp) {
+        this.mp = mp;
+    }
+
+    public double getDamageInstance() {
+        return damageInstance;
+    }
+
+    public double getManaCost() {
+        return this.manaCost;
+    }
+
+    public void setChosenRole(String chosenRole) {
+        this.chosenRole = chosenRole;
+    }
+
+    public Character getBaseInstance() {
+        return baseInstance;
+    }
+
+    public void setBaseInstance(Character baseInstance) {
+        this.baseInstance = baseInstance;
+    }
+
+    public Warrior getWarrior() {
+        return warrior;
+    }
+
+    public void setWarrior(Warrior warrior) {
+        this.warrior = warrior;
+        this.setChosenRole("Guerreiro");
+        this.baseInstance = warrior;
+    }
+
+    public Mage getMage() {
+        return mage;
+    }
+
+    public void setMage(Mage mage) {
+        this.mage = mage;
+        this.setChosenRole("Mago");
+    }
+
+    public Archer getArcher() {
+        return archer;
+    }
+
+   public void setArcher(Archer archer) {
+        this.archer = archer;
+        this.setChosenRole("Arqueiro");
+    }
+
+    public Healer getHealer() {
+        return healer;
+    }
+
+    public void setHealer(Healer healer) {
+        this.healer = healer;
+        this.setChosenRole("Curandeiro");
+    }
+
+    public double damage(double valor) {
+        double v = this.hp -= valor;
+        return this.hp;
+    }
+
+    public double manaUsage(double valor) {
+        double v = this.mp -= valor;
+        return this.mp;
+    }
+
     public double heal(double valor) {
         double v = this.hp += valor;
         return this.hp;

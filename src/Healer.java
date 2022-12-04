@@ -1,3 +1,7 @@
+/**
+ * Classe curandeiro
+ */
+
 public class Healer extends Character implements Combat {
     public String getCharName() {
         return super.getCharName();

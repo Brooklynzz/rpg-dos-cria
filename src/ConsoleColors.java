@@ -1,3 +1,7 @@
+/**
+ * Classe apenas para a modificação do console, adicionando cores para uma melhor visualização.
+ */
+
 public class ConsoleColors {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset

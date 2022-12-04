@@ -1,3 +1,7 @@
+/**
+ * Classe guerreiro
+ */
+
 public class Warrior extends Character implements Combat {
     public String getCharName() {
         return super.getCharName();

@@ -1,3 +1,8 @@
+/**
+ * Classe criada para aleatorizar nomes dos personagens inimigos, apenas um feature com piada interna.
+ * @author Hene Chen
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
