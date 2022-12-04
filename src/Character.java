@@ -181,4 +181,8 @@ public class Character {
         }
         return role;
     }
+    public double heal(double valor) {
+        double v = this.hp += valor;
+        return this.hp;
+    }
 }

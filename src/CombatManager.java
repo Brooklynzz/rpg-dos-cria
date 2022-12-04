@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class CombatManager  {
         boolean manaAvailable = true;
 
@@ -10,6 +12,7 @@ public class CombatManager  {
         } else {
             System.out.println("O dano do golpe é de " + attackerDamage1);
         }
+
         double attackedChar = e.getHp();
         double manaBurn = c.getManaCost();
         double manaUsage = c.manaUsage(manaBurn);
@@ -22,6 +25,11 @@ public class CombatManager  {
             manaAvailable = false;
             System.out.println(ConsoleColors.RED_BACKGROUND_BRIGHT + cdata.getCharName() + " PERDEU POR FALTA DE MANA! " +  ConsoleColors.RESET);
             System.exit(0);
+        }
+        double healChance = (int)Math.floor(Math.random()*(10-1+1)+1);
+        if (Objects.equals(cdata.getChosenRole(), "Curandeiro") && healChance >= 5) {
+            c.heal(35);
+            System.out.println(ConsoleColors.PURPLE_BRIGHT + cdata.getCharName() + " se curou em 50 de vida!" + ConsoleColors.RESET);
         }
     }
 
